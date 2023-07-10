@@ -1,0 +1,15 @@
+[package]
+name = "hc_fib_rust_py"
+version = "0.1.0"
+authors = ["HC <hoichong@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
+
+[lib]
+name = "hc_fib_rust_py"
+crate-type = ["cdylib"]
