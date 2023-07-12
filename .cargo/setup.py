@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+from setuptools import dist
+
+dist.Distribution().fetch_build_eggs(['setuptools_rust'])
+
+from setuptools import setup
+
+from setuptools_rust import Binding, RustExtension
+
+
+setup(
+    name="hc-fib-rust-py",
+    version="0.1",
+    rust_extensions=[RustExtension(
+        ".hc_fib_rust_py.hc_fib_rust_py",
+        path="Cargo.toml", binding=Binding.PyO3)],
+    packages=["hc_fib_rust_py"],
+    classifiers=[
+            "License :: OSI Approved :: MIT License",
+            "Development Status :: 3 - Alpha",
+            "Intended Audience :: Developers",
+            "Programming Language :: Python",
+            "Programming Language :: Rust",
+            "Operating System :: POSIX",
+            "Operating System :: MacOS :: MacOS X",
+        ],
+    zip_safe=False,
+)
