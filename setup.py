@@ -25,5 +25,10 @@ setup(
             "Operating System :: POSIX",
             "Operating System :: MacOS :: MacOS X",
         ],
+    entry_points={
+        'console_scripts': [
+            'fib-number = hc_fib_rust_py.fib_number_command:fib_number_command',
+        ],
+    },        
     zip_safe=False,
 )
