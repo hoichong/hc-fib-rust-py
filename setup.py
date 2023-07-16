@@ -24,10 +24,18 @@ setup(
             "Programming Language :: Rust",
             "Operating System :: POSIX",
             "Operating System :: MacOS :: MacOS X",
-        ],
+    ],
+    requirements=[
+        "pyyaml>=3.13"
+    ],
     entry_points={
         'console_scripts': [
-            'fib-number = hc_fib_rust_py.fib_number_command:fib_number_command',
+            'fib-number = hc_fib_rust_py.'
+            'fib_number_command:'
+            'fib_number_command',
+            'config-fib = hc_fib_rust_py.'
+            'config_number_command:'
+            'config_number_command',            
         ],
     },        
     zip_safe=False,
