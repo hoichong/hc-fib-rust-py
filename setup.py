@@ -33,9 +33,7 @@ setup(
             'fib-number = hc_fib_rust_py.'
             'fib_number_command:'
             'fib_number_command',
-            'config-fib = hc_fib_rust_py.'
-            'config_number_command:'
-            'config_number_command',            
+            'config-fib = hc_fib_rust_py.config_number_command:config_number_command',            
         ],
     },        
     zip_safe=False,
