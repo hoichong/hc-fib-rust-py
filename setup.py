@@ -11,7 +11,7 @@ from setuptools_rust import Binding, RustExtension
 
 setup(
     name="hc-fib-rust-py",
-    version="0.1",
+    version="0.2",
     rust_extensions=[RustExtension(
         ".hc_fib_rust_py.hc_fib_rust_py",
         path="Cargo.toml", binding=Binding.PyO3)],
