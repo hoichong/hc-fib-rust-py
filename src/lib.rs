@@ -12,7 +12,7 @@ use interface::config::__pyo3_get_function_run_config;
 
 use interface::object::__pyo3_get_function_object_interface;
 
-mod class_module;
+pub mod class_module;
 
 use class_module::fib_processor::FibProcessor;
 
