@@ -73,5 +73,7 @@ fn hc_fib_rust_py(_py: Python, m: &PyModule) -> PyResult<()> {
 
     m.add_wrapped(wrap_pyfunction!(time_add_vectors));
 
+    m.add_wrapped(wrap_pyfunction!(test_numpy));
+
     Ok(())
 }
