@@ -26,7 +26,8 @@ setup(
             "Operating System :: MacOS :: MacOS X",
     ],
     requirements=[
-        "pyyaml>=3.13"
+        "pyyaml>=3.13",
+        "numpy"
     ],
     entry_points={
         'console_scripts': [

@@ -1,9 +1,10 @@
 use pyo3::prelude::*;
-use pyo3::wrap_pyfunction;
 use pyo3::types::PyDict;
+use pyo3::wrap_pyfunction;
 
 pub mod fib_calcs;
 pub mod interface;
+pub mod numpy_model;
 
 use fib_calcs::fib_number::__pyo3_get_function_fibonacci_number;
 
@@ -16,6 +17,10 @@ use interface::object::__pyo3_get_function_object_interface;
 pub mod class_module;
 
 use class_module::fib_processor::FibProcessor;
+
+use numpy_model::__pyo3_get_function_calculate_times;
+
+use numpy_model::__pyo3_get_function_calculate_parameters;
 
 //pub mod fib_numbers;
 
@@ -74,6 +79,9 @@ fn hc_fib_rust_py(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(time_add_vectors));
 
     m.add_wrapped(wrap_pyfunction!(test_numpy));
+    m.add_wrapped(wrap_pyfunction!(calculate_times));
+
+    m.add_wrapped(wrap_pyfunction!(calculate_parameters));
 
     Ok(())
 }
